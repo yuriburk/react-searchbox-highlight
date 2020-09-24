@@ -81,8 +81,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/yuriburk/react-searchbox-highlight"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
