@@ -1,0 +1,87 @@
+{
+  "name": "react-searchbox-highlight",
+  "version": "1.0.3",
+  "description": "React Searchbox Highlight",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "jsnext:main": "build/index.es.js",
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "standard",
+    "format": "prettier-standard --format",
+    "test": "jest --coverage",
+    "storybook": "start-storybook"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@storybook/addon-a11y": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@testing-library/jest-dom": "^5.7.0",
+    "@testing-library/react": "^10.0.4",
+    "@testing-library/user-event": "^12.1.6",
+    "@types/jest": "^25.2.1",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.1.1",
+    "react": "^16.13.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^16.13.1",
+    "rollup": "^2.8.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "standard": "^14.3.3",
+    "ts-jest": "^25.5.1",
+    "ts-loader": "^7.0.3",
+    "typescript": "^3.9.7"
+  },
+  "peerDependencies": {
+    "react": "^16",
+    "react-dom": "^16"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": [
+      "build/"
+    ]
+  },
+  "standard": {
+    "ignore": [
+      "node_modules/",
+      "build/"
+    ],
+    "globals": [
+      "describe",
+      "it",
+      "test",
+      "expect",
+      "afterAll",
+      "jest"
+    ]
+  },
+  "dependencies": {
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/react-highlight-words": "^0.16.1",
+    "@types/react-icons": "^3.0.0",
+    "@types/styled-components": "^5.1.3",
+    "lodash.debounce": "^4.0.8",
+    "react-highlight-words": "^0.16.0",
+    "react-icons": "^3.11.0",
+    "styled-components": "^5.2.0"
+  },
+  "repository": {
+    "url": "https://github.com/yuriburk/react-searchbox-highlight"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

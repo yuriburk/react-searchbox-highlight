@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBox /> should be able to take a snapshot 1`] = `
+<div
+  class="sc-gtssRu lgvXzJ"
+>
+  <div
+    class="sc-dlnjPT khItPs"
+  >
+    <svg
+      class="sc-hKFyIo eXrevn"
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="11"
+        cy="11"
+        r="8"
+      />
+      <line
+        x1="21"
+        x2="16.65"
+        y1="21"
+        y2="16.65"
+      />
+    </svg>
+    <input
+      class="sc-eCApGN JePFZ"
+      placeholder="Search here"
+      type="text"
+    />
+    <div
+      class="sc-jSFkmK"
+      style="fill: #d2d2d2; height: 24px; width: 24px;"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+  
+        <path
+          d="M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4"
+          opacity=".25"
+        />
+        
+  
+        <path
+          d="M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z"
+        >
+          
+    
+          <animatetransform
+            attributeName="transform"
+            dur="0.8s"
+            from="0 16 16"
+            repeatCount="indefinite"
+            to="360 16 16"
+            type="rotate"
+          />
+          
+  
+        </path>
+        
+
+      </svg>
+      
+
+    </div>
+  </div>
+  <div
+    class="sc-dlnjPT sc-iCoHVE khItPs jpqSiK"
+  >
+    <div
+      class="sc-fujyUd fzFLqJ"
+    >
+      <span
+        class="sc-bdnylx"
+      >
+        <mark
+          class=" "
+          style="background-color: rgb(153, 153, 255); color: rgb(255, 255, 255);"
+        >
+          John
+        </mark>
+        <span
+          class=""
+        >
+           One - 1
+        </span>
+      </span>
+    </div>
+    <div
+      class="sc-fujyUd fzFLqJ"
+    >
+      <span
+        class="sc-bdnylx"
+      >
+        <mark
+          class=" "
+          style="background-color: rgb(153, 153, 255); color: rgb(255, 255, 255);"
+        >
+          John
+        </mark>
+        <span
+          class=""
+        >
+           Duo - 2
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
