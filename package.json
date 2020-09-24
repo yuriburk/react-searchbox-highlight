@@ -79,7 +79,8 @@
     "styled-components": "^5.2.0"
   },
   "repository": {
-    "url": "https://github.com/yuriburk/react-searchbox-highlight"
+    "type": "git",
+    "url": "https://github.com/yuriburk/react-highlight-searchbox"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
