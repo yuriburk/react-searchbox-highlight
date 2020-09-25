@@ -56,7 +56,7 @@ import SearchBox from 'react-searchbox-highlight';
   </tr>
    <tr>
     <td class="tg-0lax">highlighterStyle</td>
-    <td class="tg-0lax">Record<string, unknown></td>
+    <td class="tg-0lax">Record&lt;string, unknown&gt;</td>
     <td class="tg-0lax">Will apply custom style to the highlight component. Default: { color: '#fff', backgroundColor: '#9999ff' }</td>
   </tr>
 </tbody>
