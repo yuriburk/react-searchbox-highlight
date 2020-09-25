@@ -25,6 +25,7 @@ export interface ISearchBoxProps {
   onItemClick(value: unknown): void;
   debounceTime?: number;
   placeholder?: string;
+  highlighterStyle?: Record<string, unknown>;
 }
 
 const SearchBox = ({
@@ -33,6 +34,10 @@ const SearchBox = ({
   onItemClick,
   debounceTime = 200,
   placeholder = 'Search...',
+  highlighterStyle = {
+    color: '#fff',
+    backgroundColor: '#9999ff',
+  },
 }: ISearchBoxProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const isMounted = useRef(true);
@@ -58,22 +63,6 @@ const SearchBox = ({
     };
   }, []);
 
-  const handleOnChange = useCallback(
-    (event) => {
-      event.persist();
-      const { value } = event.target;
-
-      if (value.length > 0) {
-        setIsLoading(true);
-        setSearchWords(value.split(' '));
-        handleDebouncedChange(value);
-      } else {
-        setSearchWords([]);
-      }
-    },
-    [handleDebouncedChange]
-  );
-
   const handleClearInput = useCallback(() => {
     if (inputRef.current) {
       inputRef.current.value = '';
@@ -82,6 +71,30 @@ const SearchBox = ({
     setIsLoading(false);
     setSearchWords([]);
   }, []);
+
+  const handleOnChange = useCallback(
+    (event) => {
+      event.persist();
+      setIsLoading(true);
+      const { value } = event.target;
+
+      if (value.length > 0) {
+        setSearchWords(value.split(' '));
+        handleDebouncedChange(value);
+      } else {
+        handleClearInput();
+      }
+    },
+    [handleDebouncedChange, handleClearInput]
+  );
+
+  const handleOnItemClick = useCallback(
+    (value) => {
+      handleClearInput();
+      onItemClick(value);
+    },
+    [handleClearInput, onItemClick]
+  );
 
   return (
     <Container>
@@ -92,7 +105,6 @@ const SearchBox = ({
           type="text"
           placeholder={placeholder}
           onChange={handleOnChange}
-          onBlur={handleClearInput}
         />
         {isLoading ? (
           <LoadingIcon />
@@ -105,8 +117,12 @@ const SearchBox = ({
       {items?.length > 0 && searchWords.length > 0 && (
         <ItemsContainer>
           {items.map((item, index) => (
-            <Item key={index} onClick={() => onItemClick(item.value)}>
-              <Highlighter searchWords={searchWords} text={item.label} />
+            <Item key={index} onClick={() => handleOnItemClick(item.value)}>
+              <Highlighter
+                searchWords={searchWords}
+                text={item.label}
+                style={highlighterStyle}
+              />
             </Item>
           ))}
         </ItemsContainer>

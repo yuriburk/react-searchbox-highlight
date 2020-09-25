@@ -1,6 +1,6 @@
 {
   "name": "react-searchbox-highlight",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "React Searchbox Highlight",
   "main": "build/index.js",
   "module": "build/index.es.js",

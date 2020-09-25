@@ -7,6 +7,8 @@ This is a easy searchbox component ready to use with highlight and loading featu
 <h2>Example Usage</h2>
 
 ```js
+import SearchBox from 'react-searchbox-highlight';
+
 <SearchBox
   items={[
     { label: 'Object 1', value: { name: 'obj1' } },
@@ -14,7 +16,7 @@ This is a easy searchbox component ready to use with highlight and loading featu
   ]}
   onChange={(value) => handleChange(value)}
   onItemClick={(value) => handleOpenItem(value)}
-/>
+/>;
 ```
 
 <h2>Properties</h2>
@@ -35,7 +37,7 @@ This is a easy searchbox component ready to use with highlight and loading featu
   <tr>
     <td class="tg-0pky">onChange</td>
     <td class="tg-0pky">void</td>
-    <td class="tg-0lax">Will fire an event with the typed text that you can use to manipulate<br>the items values or do side effects</td>
+    <td class="tg-0lax">Will fire an event with the typed text that you can use to manipulate the items values or do side effects</td>
   </tr>
   <tr>
     <td class="tg-0pky">onItemClick</td>
@@ -51,6 +53,11 @@ This is a easy searchbox component ready to use with highlight and loading featu
     <td class="tg-0lax">placeholder</td>
     <td class="tg-0lax">string</td>
     <td class="tg-0lax">Will be shown in the input placeholder. Default: Search...</td>
+  </tr>
+   <tr>
+    <td class="tg-0lax">highlighterStyle</td>
+    <td class="tg-0lax">Record<string, unknown></td>
+    <td class="tg-0lax">Will apply custom style to the highlight component. Default: { color: '#fff', backgroundColor: '#9999ff' }</td>
   </tr>
 </tbody>
 </table>

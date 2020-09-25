@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from './styles';
 
-interface IHighlighterProps {
+export interface IHighlighterProps {
   searchWords: string[];
   text: string;
   autoEscape?: boolean;
@@ -13,10 +13,7 @@ const Highlighter = ({
   searchWords,
   text,
   autoEscape = true,
-  style = {
-    backgroundColor: '#9999ff',
-    color: '#fff',
-  },
+  style,
 }: IHighlighterProps) => {
   return (
     <Container
