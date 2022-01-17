@@ -6,6 +6,12 @@ This is a easy searchbox component ready to use with highlight and loading featu
 
 <h2>Example Usage</h2>
 
+Install:
+```js
+yarn add react-searchbox-highlight
+```
+
+Import:
 ```js
 import SearchBox from 'react-searchbox-highlight';
 
